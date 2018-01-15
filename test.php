@@ -4,20 +4,17 @@ require 'vendor/autoload.php';
 
 $config = [
     'handler',
-    'config',
+    'config' => 'index lovely config',
     'nodes' => [
-
+        'news' => ['config' => 'news lovely config',],
+        'catalog' => ['config' => 'catalog lovely config',],
     ],
-    'arguments' => [
-
-    ]
 ];
 
 
 
-$r = new \Reactor\PrimitiveRouter\Router($config);
+$r = new \Reactor\PrimitiveRouter\Router();
 
-
-$c = $r->route($method, '/index');
+$c = $r->routeStr('/news', $config);
 
 print_r($c);
