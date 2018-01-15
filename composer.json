@@ -1,0 +1,9 @@
+{
+    "name": "webreactor/primitive-url-router",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Reactor\\PrimitiveRouter\\": "src/"
+        }
+    }
+}
